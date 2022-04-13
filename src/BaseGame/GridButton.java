@@ -3,6 +3,7 @@ package BaseGame;
 import javax.swing.*;
 import java.awt.*;
 
+
 public class GridButton extends JButton {
         ImageIcon cross = new ImageIcon("cross.png");
         ImageIcon circle = new ImageIcon("circle.png");
@@ -11,6 +12,7 @@ public class GridButton extends JButton {
       //  this.setIcon(circle);
         this.setBackground(Color.WHITE);
         this.setFocusable(false);
+
     }
 
     public void setCross() {
