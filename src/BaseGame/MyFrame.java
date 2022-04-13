@@ -12,7 +12,6 @@ public class MyFrame extends JFrame {
         this.setResizable(false);
         this.setTitle("Tic-Tac-Toe");
 
-
         //this.pack();
     }
 }
