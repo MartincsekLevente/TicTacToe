@@ -1,6 +1,7 @@
 package BaseGame.States;
 
 import BaseGame.GameController;
+import BaseGame.Main;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainMenu extends JLabel implements ActionListener {
-    ImageIcon mainlogo = new ImageIcon("mainmenulogo.png");
+    ImageIcon mainlogo = new ImageIcon("src/BaseGame/Images/mainmenulogo.png");
     JButton playButton = new JButton();
     GameController gameController;
 

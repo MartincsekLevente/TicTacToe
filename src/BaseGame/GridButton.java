@@ -5,8 +5,6 @@ import java.awt.*;
 
 
 public class GridButton extends JButton {
-    ImageIcon cross = new ImageIcon("cross.png");
-    ImageIcon circle = new ImageIcon("circle.png");
     public String current;
 
     public GridButton() {
@@ -18,12 +16,12 @@ public class GridButton extends JButton {
     }
 
     public void setCross() {
-        this.setIcon(new ImageIcon("cross.png"));
+        this.setIcon(new ImageIcon("src/BaseGame/Images/cross.png"));
         current = "cross";
     }
 
     public void setCircle() {
-        this.setIcon(new ImageIcon("circle.png"));
+        this.setIcon(new ImageIcon("src/BaseGame/Images/circle.png"));
         current = "circle";
     }
 }
