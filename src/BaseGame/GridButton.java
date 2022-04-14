@@ -5,12 +5,13 @@ import java.awt.*;
 
 
 public class GridButton extends JButton {
-        ImageIcon cross = new ImageIcon("cross.png");
-        ImageIcon circle = new ImageIcon("circle.png");
-        public String current;
-   public GridButton() {
+    ImageIcon cross = new ImageIcon("cross.png");
+    ImageIcon circle = new ImageIcon("circle.png");
+    public String current;
 
-      //  this.setIcon(circle);
+    public GridButton() {
+
+        //  this.setIcon(circle);
         this.setBackground(Color.WHITE);
         this.setFocusable(false);
         current = "null";

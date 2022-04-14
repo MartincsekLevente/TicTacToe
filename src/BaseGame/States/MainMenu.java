@@ -40,6 +40,6 @@ public class MainMenu extends JLabel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-            gameController.InitGame();
+        gameController.InitGame();
     }
 }

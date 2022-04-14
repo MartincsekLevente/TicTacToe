@@ -6,7 +6,9 @@ import BaseGame.States.MainMenu;
 public class GameController {
     MyFrame myFrame = new MyFrame();
     MainMenu mainMenu = new MainMenu();
-    Ingame inGame = new Ingame();;
+    Ingame inGame = new Ingame();
+    ;
+
     public void InitMenu() {
 
         myFrame.add(mainMenu);
