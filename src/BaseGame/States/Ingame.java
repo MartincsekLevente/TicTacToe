@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class Ingame extends JLabel implements ActionListener {
     boolean player1turn;
-    String whowon;
+   public String whowon;
     GameController gameController;
     GridButton buttonx1_y1;
     GridButton buttonx1_y2;
@@ -44,6 +44,7 @@ public class Ingame extends JLabel implements ActionListener {
         this.setText("MainMenu");
         player1turn = true;
         StartGame();
+        whowon = "null";
     }
 
     public void setGameController(GameController gameController) {
@@ -124,14 +125,26 @@ public class Ingame extends JLabel implements ActionListener {
 
     public void endGame() {
         if (whowon.equals("player1")) {
-            JOptionPane.showMessageDialog(this, "Player 1 has won the game!", "Congratulations!",JOptionPane.WARNING_MESSAGE);
-            gameController.GameEnded();
+           int dialogResult = JOptionPane.showConfirmDialog(this, "Player 1 has won the game! \n\n Want to play a new game?", "Congratulations!",JOptionPane.YES_NO_OPTION);
+            if(dialogResult == JOptionPane.YES_OPTION){
+                gameController.InitGame();
+            }else {
+                gameController.GameEnded();
+            }
         } else if (whowon.equals("player2")) {
-            JOptionPane.showMessageDialog(this, "Player 2 has won the game!", "Congratulations!", JOptionPane.WARNING_MESSAGE);
-            gameController.GameEnded();
+            int dialogResult =  JOptionPane.showConfirmDialog(this, "Player 2 has won the game! \n\n Want to play a new game?", "Congratulations!", JOptionPane.YES_NO_OPTION);
+            if(dialogResult == JOptionPane.YES_OPTION){
+                gameController.InitGame();
+            }else {
+                gameController.GameEnded();
+            }
         } else {
-            JOptionPane.showMessageDialog(this, "Draw! There is no winner!", "Game Over", JOptionPane.WARNING_MESSAGE);
-            gameController.GameEnded();
+            int dialogResult =  JOptionPane.showConfirmDialog(this, "Draw! There is no winner! \n\n Want to play a new game?", "Game Over", JOptionPane.YES_NO_OPTION);
+            if(dialogResult == JOptionPane.YES_OPTION){
+                gameController.InitGame();
+            }else {
+                gameController.GameEnded();
+            }
         }
     }
 
